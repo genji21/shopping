@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="app-sneaker">
+        <header id="header">
+            <div class="menu" id="navbar">
+                <nav>
+                    <h1>
+                        <a class="logo" href="https://www.facebook.com/truongphiqn/">
+                            <span>Trường Phi</span>
+                            <span>Shoes</span>
+                        </a>
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="#header" onclick = "searchInput(this) ">
+                                 <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-bars"  aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <div onclick="checkInValidShop()" class="menu-shopping">
+                                <i class="fa fa-cart-arrow-down"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                
+            
+            </div>
+            
+            <div class="menu-input" href="#header">
+                <input type="text" placeholder="Click enter after typing ...">
+            </div> 
+            <div id="menu-drop"  >
+                <i class="fa fa-times"></i>
+                <div class="menu-drop-nav">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Shop Now</a></li>
+                        <li><a href="validation.html">Contact</a></li>
+        
+                    </ul>
+    
+                </div>
+                
+            </div>
+        </header>
+        <!-- references -->
+       <div class="shopping_cart_container" id="shopping_cart">
+        <div class="shopping_cart_product">
+            <form action="#" method ="">
+                <div onclick="closeShopping()" class="shopping_close">
+                    <button type="button">x</button>
+                </div>
+                <ul class="shopping_list">
+                  <!-- li -->
+                </ul>
+                <div class="price_item_total">
+                    <span class="price_item"></span>
+                    <button type="submit" class="price_checkout_link">
+                        Check Out
+                    </button>
+                </div>
+            </form>
+            <p id="hienthiloi" style="color: red;">d</p>
+        </div>
+       </div>
+        <main id="main">
+            <div class="main-container">
+                <div class="main-left">
+                    <div class="main-left-container">
+                        <h3 class="main-left-title">
+                            Search Here...
+                        </h3>
+                        <form method="POST" class="main-left-search-box">
+                            <input type="text" placeholder="Product Name..." class="left-search">
+                            <button class="main-search-button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                        <div class="main-left-price-range-container">
+                            <div class="main-left-price-range-box">
+                                <h3>Price Range</h3>
+                                <div class="main-left-price">
+                                    <span class="price-first">$50 </span>
+                                    -
+                                    <span class="price-second">$6000</span>
+                                </div>
+                                <div class="main-left-price-range">
+                                    <input id="price-range-one" class="slider"type="range" min="100" max="9000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-left-oc-dc-rw-container">
+                            <div class="main-left-ocasion">
+                                <h3>Occasion</h3>
+                                <div class="main-left-ocasion-check">
+                                    <div class="check-item ocasion-check-casual">
+                                        <input type="checkbox" id="casual">
+                                        <label for="casual">Casuals</label>
+                                    </div>
+                                    <div class="check-item ocasion-check-party">
+                                        <input type="checkbox" id="party">
+                                        <label for="party">Party</label>
+                                    </div>
+                                    <div class="check-item ocasion-check-wedding">
+                                        <input type="checkbox" id="wedding">
+                                        <label for="wedding">Wedding</label>
+                                    </div>
+                                    <div class="check-item ocasion-check-ethnic">
+                                        <input type="checkbox" id="ethnic">
+                                        <label for="ethnic">Ethenic</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-left-discount">
+                                <h3>Discount</h3>
+                                <div class="main-left-discount-check">
+                                    <div class="check-item discount-check-5">
+                                        <input type="checkbox" id="ds1">
+                                        <label for="ds1">5% or More</label>
+                                    </div>
+                                    <div class="check-item discount-check-10">
+                                        <input type="checkbox" id="ds2">
+                                        <label for="ds2">10% or More</label>
+                                    </div>
+                                    <div class="check-item discount-check-20">
+                                        <input type="checkbox" id="ds3">
+                                        <label for="ds3">20% or More</label>
+                                    </div>
+                                    <div class="check-item discount-check-30">
+                                        <input type="checkbox" id="ds4">
+                                        <label for="ds4">30% or More</label>
+                                    </div>
+                                    <div class="check-item discount-check-50">
+                                        <input type="checkbox" id="ds5">
+                                        <label for="ds5">50% or More</label>
+                                    </div>
+                                    <div class="check-item discount-check-60">
+                                        <input type="checkbox" id="ds6">
+                                        <label for="ds6">60% or More</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-left-review-container">
+                                <h3>Customer Review</h3>
+                                <div class="main-left-review">
+                                  <div class="main-left-review-box">
+                                      <ul class="review-list">
+                                          <li class="review-item">
+                                              <i class="fa fa-star"></i>
+                                          </li>
+                                          <li class="review-item">
+                                            <i class="fa fa-star"></i>
+                                          </li>
+                                          <li class="review-item">
+                                            <i class="fa fa-star"></i>
+                                          </li>
+                                          <li class="review-item">
+                                            <i class="fa fa-star"></i>
+                                          </li>
+                                          <li class="review-item">
+                                            <i class="fa fa-star"></i>
+                                          </li>
+                                          <li class="review-item review-text">
+                                            <span class="main-left-review-text">5.0</span>
+
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <div class="main-left-review-box">
+                                    <ul class="review-list">
+                                        <li class="review-item">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li class="review-item review-text">
+                                          <span class="main-left-review-text">4.0</span>
+                                          
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="main-left-review-box">
+                                    <ul class="review-list">
+                                        <li class="review-item">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star-half-o"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li class="review-item review-text">
+                                          <span class="main-left-review-text">4.5</span>
+                                          
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="main-left-review-box">
+                                    <ul class="review-list">
+                                        <li class="review-item">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li class="review-item review-text">
+                                          <span class="main-left-review-text">3.0</span>
+                                          
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="main-left-review-box">
+                                    <ul class="review-list">
+                                        <li class="review-item">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star-half-o"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li class="review-item">
+                                          <i class="fa fa-star-o"></i>
+                                        </li>
+                                        <li class="review-item review-text">
+                                          <span class="main-left-review-text">2.5</span>
+                                          
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="main-left-special-deal-container">
+                                <h3>Special Deals</h3>
+                                <div class="main-left-special-deal">
+                                    <div class="main-left-special-product">
+                                        <div class="product-deal product-deal-img">
+                                            <img src="img/sp1.jpg" alt="">
+                                        </div>
+                                        <div class=" product-deal product-deal-name-box">
+                                            <span class="product-deal-name">
+                                                Shuberry Heels
+                                            </span>
+                                            <br>
+                                            <span class="product-deal-price">
+                                                $180.00
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="main-left-special-product">
+                                        <div class="product-deal product-deal-img">
+                                            <img src="img/sp2.jpg" alt="">
+                                        </div>
+                                        <div class=" product-deal product-deal-name-box">
+                                            <span class="product-deal-name">
+                                                Shuberry Heels
+                                            </span>
+                                            <br>
+                                            <span class="product-deal-price">
+                                                $180.00
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="main-left-special-product">
+                                        <div class="product-deal product-deal-img">
+                                            <img src="img/sp3.jpg" alt="">
+                                        </div>
+                                        <div class=" product-deal product-deal-name-box">
+                                            <span class="product-deal-name">
+                                                Shuberry Heels
+                                            </span>
+                                            <br>
+                                            <span class="product-deal-price">
+                                                $180.00
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="main-left-special-product">
+                                        <div class="product-deal product-deal-img">
+                                            <img src="img/sp4.jpg" alt="">
+                                        </div>
+                                        <div class=" product-deal product-deal-name-box">
+                                            <span class="product-deal-name">
+                                                Shuberry Heels
+                                            </span>
+                                            <br>
+                                            <span class="product-deal-price">
+                                                $180.00
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="main-left-special-product">
+                                        <div class="product-deal product-deal-img">
+                                            <img src="img/sp5.jpg" alt="">
+                                        </div>
+                                        <div class=" product-deal product-deal-name-box">
+                                            <span class="product-deal-name">
+                                                Shuberry Heels
+                                            </span>
+                                            <br>
+                                            <span class="product-deal-price">
+                                                $180.00
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-right">
+                    <div class="main-right-container">
+                        <div class="main-right-title-img-container">
+                            <div class="right-title right-title-img-one">
+                                <span class="right-title-text">
+                                    40% OFF
+                                </span>
+                            </div>
+                            <div class="right-title right-title-img-two">
+                                <span class="right-title-text">
+                                    50% OFF
+                                </span>
+                            </div>
+                        </div>
+                        <div class="main-right-product-container">
+                           <div class="main-product-row">
+                           
+                           </div>
+                        </div>
+                        <div class="main-right-title-img-container main-right-title-img-container-2 ">
+                            <div class=" right-title right-title-img-one right-title-img-one-2">
+                                <span class="right-title-text">
+                                   32% OFF
+                                </span>
+                            </div>
+                            <div class="right-title right-title-img-two right-title-img-two-2" >
+                                <span class="right-title-text">
+                                   35% OFF
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-three">
+                <div class="box-three-left">
+                    <div class="box-three-left-container">
+                        <div class="box-three-left-content">
+                            <span>Some More Shoes</span>
+                            <div class="box-three-left-icon">
+                                <span >
+                                    <i class="fa fa-arrow-left" aria-hidden="true" style="display: block;"></i>
+
+                                </span>
+                                <span >
+                                    <i class="fa fa-arrow-right" aria-hidden="true" style="display: block;"></i>
+
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-three-right">
+                    <div class="list-slider-box">
+                        <ul  class="list-slider-2" id = "lastList">
+                            <li class="list-slider-2-item">
+                                <img src="img/d1.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d2.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d3.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d4.png" alt="">
+                            </li>
+                        </ul>
+                        <ul class="list-slider-2 luotdi">
+                            <li class="list-slider-2-item">
+                                <img src="img/d6.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d7.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d3.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d2.png" alt="">
+                            </li>
+                        </ul>
+                        <ul id="firstList" class="list-slider-2 ">
+                            <li class="list-slider-2-item">
+                                <img src="img/d3.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d4.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d1.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d2.png" alt="">
+                            </li>
+                        </ul>
+                        <ul id="firstList" class="list-slider-2 ">
+                            <li class="list-slider-2-item">
+                                <img src="img/d3.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d4.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d1.png" alt="">
+                            </li>
+                            <li class="list-slider-2-item">
+                                <img src="img/d2.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-container-row">
+                    <div class="footer-container-box">
+                        <h3>Trường <span>P</span>hi Store Shoes</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat assumenda voluptatibus, quisquam obcaecati beatae illo commodi aliquam velit labore optio ullam porro saepe rerum odit ratione doloribus nihil consequatur quas!
+
+                        </p>
+                        <div class="icon-box-social">
+                            <i class="icon-box-item fa fa-facebook">
+
+                            </i>
+                            <i class=" fa fa-twitter icon-box-item">
+
+                            </i>
+                            <i class=" fa fa-instagram icon-box-item"></i>
+                            <i class=" fa fa-linkedin icon-box-item"></i>
+                        </div>
+                    </div>
+                    <div class="footer-container-box">
+                        <h3><Span>Our</Span> information</h3>
+                        <ul class="list-footer-box-2">
+                            <li class="list-footer-box-item">Home</li>
+                            <li class="list-footer-box-item"> About</li>
+                            <li class="list-footer-box-item">Services</li>
+                            <li class="list-footer-box-item">Shorts Codes</li>
+                            <li class="list-footer-box-item">Contacts</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="footer-container-box">
+                        <h3><span>Store</span>Information</h3>
+                        <div class="footer-contact-box ">
+                            <div class="contact-phone">
+                                <i class="fa fa-phone"> </i>
+                                <div class="contact-phone-box">
+                                    <span class="phone-title">Phone Number</span>
+                                    <span class="phone-content">+1 234 567 8901</span>
+                                </div>
+                            </div>
+                            <div class="contact-email">
+                                <i class="fa fa-envelope"></i>
+                                <div class="contact-email-content">
+                                    <span class="email-text">Email Address</span>
+                                    <p class="email content">Email : 
+                                        <span class="email-content-special">
+                                            mail@example.com
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-location">
+                                <i class="fa fa-map-marker"></i>                   
+                                    <div class="contact-location-box">
+                                        <span class="location-title">
+                                            Location
+                                        </span>
+                                        <span class="location-content">
+                                            Broome St, Ny <br>
+                                            10002,California,USA
+                                        </span>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="footer-container-box">
+                        <h3><span>Flickr </span>Post</h3>
+                        <div class="footer-container-img-box">
+                            <div class="footer-img-row">
+                                <div class="footer-img">
+                                    <img src="img/f1.png" alt="">
+                                </div>
+                                <div class="footer-img">
+                                    <img src="img/f2.png" alt="">
+                                </div>
+                                <div class="footer-img">
+                                    <img src="img/f3.png" alt="">
+                                </div>
+                                <div class="footer-img">
+                                    <img src="img/f1.png" alt="">
+                                </div>
+                                <div class="footer-img">
+                                    <img src="img/f2.png" alt="">
+                                </div>
+                                <div class="footer-img">
+                                    <img src="img/f3.png" alt="">
+                                </div>
+                                <div class="footer-img">
+                                    <img src="img/f1.png" alt="">
+                                </div>
+                                <div class="footer-img">
+                                    <img src="img/f2.png" alt="">
+                                </div>
+                                <div class="footer-img">
+                                    <img src="img/f3.png" alt="">
+                                </div>
+                                
+                               </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js" integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg==" crossorigin="anonymous"></script>
+    <script src="js/product.js">
+        
+    </script>
+</body>
+</html>
